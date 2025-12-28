@@ -1,0 +1,27 @@
+import mongoose from "mongoose"
+import DB_NAME from "../constants.js"
+
+
+// import express from 'express'
+// const app = express()
+
+
+
+
+
+//connecting DB with iffy function
+
+const connectDB = async () => {
+    try {
+
+      const connectionInstance = await mongoose.connect(`${process.env.MONGODB_URL}/${DB_NAME}`)
+      console.log(connectionInstance.connection.host)
+    
+    } catch (error) {
+        console.log("error hai bhai");
+        // process.exit(1)
+    }
+}
+
+
+export default connectDB

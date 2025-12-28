@@ -1,1 +1,3 @@
-export const DB_NAME = "webName"
+ const DB_NAME = "MY-First-DATABASE"
+
+ export default DB_NAME
